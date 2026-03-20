@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tanmay Adhikari Portfolio
+
+Modern personal portfolio built with Next.js. The UI is data-driven (projects, experience, skills, and education) and includes animated visuals.
+
+## Tech Stack
+- Next.js 16 (App Router)
+- React + TypeScript
+- Tailwind CSS
+- Framer Motion
+- Three.js (shader background effect)
+
+## What’s Included
+- Hero overlay animations (`src/components/Overlay.tsx`)
+- Background visuals (`src/components/ui/background-boxes.tsx`, `src/components/ui/aether-flow.tsx`)
+- Portfolio content from a single source of truth (`src/data/profile.ts`)
+- Projects + Experience + Skills + Education + Contact (`src/components/Projects.tsx`)
+- Optional scroll-scrubbed image sequence component (`src/components/ScrollyCanvas.tsx`) that reads WebP frames from `public/sequence/`
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js and `npm`
 
+### Install and Run
+1. Open this repo’s `website` folder
+2. Install dependencies:
+```bash
+npm install
+```
+3. Start the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+4. Open `http://localhost:3000`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
+- `npm run dev` - start dev server
+- `npm run build` - build for production
+- `npm start` - run the production server
+- `npm run lint` - lint code
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customize Your Content
+- Update your name, summary, skills, projects, and experience: `src/data/profile.ts`
+- Update hero overlay copy and CTA text: `src/app/HomeClient.tsx`
+- If you want to use the scroll image sequence: add your WebP frames under `public/sequence/` (see `public/sequence/README.md` for supported filenames), then wire `ScrollyCanvas` into `HomeClient` (it’s present in the codebase as an optional component).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
+Any Next.js hosting provider works. Typical flow:
+1. `npm run build`
+2. `npm start`
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+Contributions are welcome—open a PR if you want to improve animations, add projects, or refine the UI.
