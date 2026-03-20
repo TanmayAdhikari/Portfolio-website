@@ -171,6 +171,14 @@ export function Projects() {
                   </a>
                   <a
                     className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/10"
+                    href="/resume.pdf"
+                    download={`${profile.name}-Resume.pdf`}
+                    aria-label="Download resume as PDF"
+                  >
+                    Download Resume
+                  </a>
+                  <a
+                    className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/10"
                     href={profile.links.linkedin}
                     target="_blank"
                     rel="noreferrer"
